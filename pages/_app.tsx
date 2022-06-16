@@ -1,4 +1,3 @@
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "../components/Header";
