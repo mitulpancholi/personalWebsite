@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
-import styles from "../styles/Home.module.css";
+import Clamp from "../lib/Clamp";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +13,13 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-
+        <HomeSection>
+          <StyledHeading>
+            creative
+            <br />
+            developer
+          </StyledHeading>
+        </HomeSection>
       </main>
 
       <footer></footer>
@@ -23,3 +28,18 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+const StyledHeading = styled.h1`
+  font-size: ${Clamp(1,19)};
+  text-transform: uppercase;
+  line-height: 80%;
+`;
+
+
+
+const HomeSection = styled.section`
+  height: calc(100vh - 61px);
+  min-height: 768px;
+  display: flex;
+  align-items: flex-end;
+`;
