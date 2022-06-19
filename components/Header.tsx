@@ -38,15 +38,17 @@ const UnorderList = styled.ul`
   list-style: none;
   display: flex;
   justify-content: space-between;
-  min-width: 250px;
+  min-width: 300px;
 `;
 
 const ListItems = styled.li`
   font-size: 1.25rem;
   cursor: pointer;
+  text-transform: uppercase;
 `;
 
 const PageTitle = styled.h1`
   font-size: 1.5rem;
   cursor: pointer;
+  text-transform: uppercase;
 `;
