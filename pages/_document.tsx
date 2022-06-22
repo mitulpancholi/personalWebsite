@@ -63,7 +63,7 @@ export default class MyDocument extends Document {
             content="I am ReactJs / NextJs Expert focusing on creative developement, Working with the industry for last 5+ years with UI designer / Agency / Product Engineer Creating to create memorable website's. My Skillset includes ReactJs, NextJs, Gatsby, GraphQL, Apollo, Framer-motion, GSAP, Styled-components and Stiches"
           />
           {/* <meta property="og:image" content="Image Path here" /> */}
-          <meta name="theme-color" content="#e5e5e5" />
+          <meta name="theme-color" content="#041C32" />
 
           <link rel="icon" href="/favicon.ico" />
           <link
