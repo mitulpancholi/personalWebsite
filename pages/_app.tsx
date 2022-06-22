@@ -53,7 +53,11 @@ const GlobalStyle = createGlobalStyle`
   user-select: none;
   }
   body {
-    background-color: #E5E5E5;
+    /* background-color: #E5E5E5; */
+    background-color: #041C32;
+    color : #ECB365;
+    height: 100%;
+    width: 100%;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
     ::-webkit-scrollbar { 

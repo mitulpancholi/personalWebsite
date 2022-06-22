@@ -62,7 +62,7 @@ const MyHobby = styled.p`
   padding-top: 60px;
 `;
 
-const IntroText = styled.h4`
+const IntroText = styled.span`
   font-size: ${Clamp(0.875,1.5)};
   grid-column-start: 4;
   grid-column-end: 6;

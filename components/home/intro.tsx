@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Clamp from "../../lib/Clamp";
 
 const Intro = () => {
@@ -9,7 +9,7 @@ const Intro = () => {
           <DisplaySpan>Creative</DisplaySpan>
           <IndividualSpan aria-hidden="true">c</IndividualSpan>
           <IndividualSpan aria-hidden="true">r</IndividualSpan>
-          <IndividualSpan aria-hidden="true">e</IndividualSpan>
+          <CIndividualspan aria-hidden="true">e</CIndividualspan>
           <IndividualSpan aria-hidden="true">a</IndividualSpan>
           <IndividualSpan aria-hidden="true">t</IndividualSpan>
           <IndividualSpan aria-hidden="true">i</IndividualSpan>
@@ -36,7 +36,10 @@ const Intro = () => {
 
 export default Intro;
 
+
 const ParentSpan = styled.span`
+  position: relative;
+  z-index: 2;
   font-size: ${Clamp(2, 19.1)};
   line-height: 80%;
 `;
@@ -75,9 +78,14 @@ const IndividualSpan = styled.span`
   text-transform: uppercase;
 `;
 
+const CIndividualspan = styled(IndividualSpan)`
+    clip-path: polygon(0% 0%, 0% 100%, 47% 100%, 24% 95%, 87% 16%, 36% 96%, 20% 77%, 6% 100%, 100% 100%, 100% 0%);
+
+`;
+
 const HomeSection = styled.section`
   height: calc(100vh - 62px);
-  min-height: 666px;
+  min-height: 538px;
   display: flex;
   align-items: flex-end;
 `;
