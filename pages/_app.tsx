@@ -54,7 +54,13 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     background-color: #E5E5E5;
-  }
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    ::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+    }
+}
+
   a {
     text-decoration: none;
   }
