@@ -37,7 +37,6 @@ const Intro = () => {
 export default Intro;
 
 const ParentSpan = styled.span`
-  position: relative;
   font-size: ${Clamp(2, 19.1)};
   line-height: 80%;
 `;
