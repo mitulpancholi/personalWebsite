@@ -54,7 +54,7 @@ export default class MyDocument extends Document {
             property="twitter:description"
             content="I am ReactJs / NextJs Expert focusing on creative developement, Working with the industry for last 5+ years with UI designer / Agency / Product Engineer Creating to create memorable website's. My Skillset includes ReactJs, NextJs, Gatsby, GraphQL, Apollo, Framer-motion, GSAP, Styled-components and Stiches"
           />
-          {/* <meta property="twitter:image" content="imagepath here" /> */}
+          <meta property="twitter:image" content="/mitul.png" />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.mitulpancholi.com" />
           <meta property="og:title" content="Mitul Pancholi" />
@@ -62,7 +62,7 @@ export default class MyDocument extends Document {
             property="og:description"
             content="I am ReactJs / NextJs Expert focusing on creative developement, Working with the industry for last 5+ years with UI designer / Agency / Product Engineer Creating to create memorable website's. My Skillset includes ReactJs, NextJs, Gatsby, GraphQL, Apollo, Framer-motion, GSAP, Styled-components and Stiches"
           />
-          {/* <meta property="og:image" content="Image Path here" /> */}
+          <meta property="og:image" content="/mitul.png" />
           <meta name="theme-color" content="#041C32" />
 
           <link rel="icon" href="/favicon.ico" />
