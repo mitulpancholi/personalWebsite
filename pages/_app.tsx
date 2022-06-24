@@ -58,8 +58,10 @@ const GlobalStyle = createGlobalStyle`
     color : #ECB365;
     height: 100%;
     width: 100%;
+    position: relative;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    scrollbar-width: none;
+ /* Firefox */
     ::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
     }

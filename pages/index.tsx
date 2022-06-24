@@ -39,8 +39,15 @@ const Description = styled.article`
 `;
 
 const ArrowWrapper = styled.span`
-  grid-column-start: 1;
-  grid-column-end: 3;
+  @media ${devices.tablet} {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    span {
+      ::before {
+        margin-bottom: -18px;
+      }
+    }
+  }
   font-size: ${Clamp(4, 8)};
   font-weight: 700;
   text-align: center;
@@ -53,7 +60,7 @@ const ArrowWrapper = styled.span`
       width: 0;
     }
     ::before {
-      margin-top: -18px;
+      margin-top: 0;
     }
     ::after {
       margin-bottom: 0;
@@ -68,6 +75,6 @@ const ShortDesc = styled.span`
   }
   text-transform: uppercase;
   font-size: ${Clamp(1, 2)};
-  grid-column-start: 4;
+  grid-column-start: 3;
   grid-column-end: 12;
 `;

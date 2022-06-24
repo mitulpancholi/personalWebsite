@@ -14,9 +14,12 @@ const Header = () => {
     if (menuActive) {
       document.body.style.overflow = "hidden";
       // used to avoid scroll during mobile menu
-      // document.body.style.position = "fixed";
+      document.body.style.touchAction = "none";
+      // touch-action: none;
+      // -ms-touch-action: none;
     } else {
       document.body.style.overflow = "auto";
+      document.body.style.touchAction = "auto";
       // document.body.style.position = "initial";
     }
   }, [menuActive]);
@@ -39,7 +42,7 @@ const Header = () => {
             </Link>
           </UnorderList>
           <MobileMenuTitle onClick={() => setMenuActive(!menuActive)}>
-            {menuActive ? 'Close' : 'Menu'}
+            {menuActive ? "Close" : "Menu"}
           </MobileMenuTitle>
         </StyledNav>
       </HeaderWrapper>
@@ -53,7 +56,9 @@ const Header = () => {
           </MobileMenuUl>
         </MobileMenuListWrapper>
         <StyledLocationWrapper>
-          <p>Based in Surat <br /> gujarat,INDIA</p>
+          <p>
+            Based in Surat <br /> gujarat,INDIA
+          </p>
         </StyledLocationWrapper>
       </MobileMenu>
     </>
@@ -63,9 +68,9 @@ const Header = () => {
 export default Header;
 
 const MobileMenu = styled.div<MobileMenuProps>`
-@media ${devices.tablet} {
-  display: none;
-}
+  @media ${devices.tablet} {
+    display: none;
+  }
   min-height: 464px;
   display: flex;
   flex-direction: column;
@@ -80,6 +85,8 @@ const MobileMenu = styled.div<MobileMenuProps>`
   clip-path: ${(props) =>
     props.openMenu ? "inset(0% 0 0 0)" : "inset(100% 0 0 0)"};
   overflow: hidden;
+   /* height: -webkit-fill-available; */
+  -webkit-overflow-scrolling: touch;
   transition: ease 0.5s all;
   padding: 20px 20px;
 `;
@@ -103,7 +110,7 @@ const StyledLocationWrapper = styled.div`
     text-transform: uppercase;
     letter-spacing: 2px;
   }
-`
+`;
 
 const HeaderWrapper = styled.header`
   z-index: 5;

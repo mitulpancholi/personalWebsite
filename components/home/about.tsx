@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Clamp from "../../lib/Clamp";
+import { devices } from "../../styles/media/device";
 
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
           PROBABLY PLAYING GAMES OR WATCHING FOOTBALL.
         </MyHobby>
       </AboutDescWrapper>
-        <IntroText>A blend of UI and Product Engineering</IntroText>
+      <IntroText>A blend of UI and Product Engineering</IntroText>
       <IntroDescWrapper>
         <p>
           With a background in design, I work closely with design focused teams
@@ -37,23 +38,37 @@ const About = () => {
 export default About;
 
 const AboutWrapper = styled.section`
+  @media ${devices.tablet} {
+    grid-template-columns: repeat(12, 1fr);
+  }
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
   padding-top: ${Clamp(4, 12)};
 `;
 
 const PageNumber = styled.div`
+  @media ${devices.tablet} {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: center;
+  }
   grid-column-start: 1;
-  grid-column-end: 2;
-  text-align: center;
+  grid-column-end: 7;
   font-size: ${Clamp(1.5, 2)};
 `;
 
 const AboutDescWrapper = styled.article`
-  grid-column-start: 4;
-  grid-column-end: 11;
-  font-size: ${Clamp(1, 2)};
+  @media ${devices.tablet} {
+    grid-column-start: 4;
+    grid-column-end: 11;
   margin-bottom: 100px;
+
+  }
+  grid-column-start: 1;
+  grid-column-end: 7;
+  font-size: ${Clamp(1, 2)};
+  margin-bottom: 60px;
 `;
 
 const MyIntro = styled.p``;
@@ -63,25 +78,36 @@ const MyHobby = styled.p`
 `;
 
 const IntroText = styled.span`
-  font-size: ${Clamp(0.875,1.5)};
-  grid-column-start: 4;
-  grid-column-end: 6;
+  @media ${devices.tablet} {
+    grid-column-start: 4;
+    grid-column-end: 7;
+  }
+  font-size: ${Clamp(1, 1.5)};
+  grid-column-start: 1;
+  grid-column-end: 7;
   font-weight: 500;
-`
+`;
 
 const IntroDescWrapper = styled.div`
-  grid-column-start: 7;
-  grid-column-end: 11;
-  p {
-    font-size: ${Clamp(0.75,1.25)};
-    margin-bottom: 30px;
-  font-weight: 500;
-
+  @media ${devices.tablet} {
+    grid-column-start: 7;
+    grid-column-end: 11;
   }
-`
+  grid-column-start: 1;
+  grid-column-end: 7;
+  p {
+    font-size: ${Clamp(1, 1.25)};
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+`;
 
 const AboutLink = styled.p`
-  grid-column-start: 7;
-  grid-column-end: 11;
-  font-size: ${Clamp(0.75,1.25)};
-`
+  @media ${devices.tablet} {
+    grid-column-start: 7;
+    grid-column-end: 11;
+  }
+  grid-column-start: 1;
+  grid-column-end: 7;
+  font-size: ${Clamp(1, 1.25)};
+`;
