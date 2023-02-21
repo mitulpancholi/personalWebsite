@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Mitul Pancholi</title>
+        <title>Mitul Pancholi | Portfolio</title>
       </Head>
 
       <main>
