@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Clamp from "../lib/Clamp";
 import { devices } from "../styles/media/device";
+import { useRouter } from "next/router";
 
 interface MobileMenuProps {
   openMenu: boolean;
@@ -10,6 +11,7 @@ interface MobileMenuProps {
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
+  const router = useRouter();
   useEffect(() => {
     if (menuActive) {
       document.body.style.overflow = "hidden";
@@ -23,6 +25,10 @@ const Header = () => {
       // document.body.style.position = "initial";
     }
   }, [menuActive]);
+
+  useEffect(() => {
+    setMenuActive(false);
+  }, [router.asPath]);
   return (
     <>
       <HeaderWrapper>
@@ -49,10 +55,18 @@ const Header = () => {
       <MobileMenu openMenu={menuActive}>
         <MobileMenuListWrapper>
           <MobileMenuUl>
-            <li>Home</li>
-            <li>Work</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <Link href="/work">
+              <li>Work</li>
+            </Link>
+            <Link href="/about">
+              <li>About</li>
+            </Link>
+            <Link href="/contact">
+              <li>Contact</li>
+            </Link>
           </MobileMenuUl>
         </MobileMenuListWrapper>
         <StyledLocationWrapper>
@@ -71,6 +85,7 @@ const MobileMenu = styled.div<MobileMenuProps>`
   @media ${devices.tablet} {
     display: none;
   }
+  color: white;
   min-height: 464px;
   display: flex;
   flex-direction: column;
@@ -80,12 +95,12 @@ const MobileMenu = styled.div<MobileMenuProps>`
   bottom: 0;
   right: 0;
   left: 0;
-  background: #04293a;
+  background: #000000;
   z-index: 4;
   clip-path: ${(props) =>
     props.openMenu ? "inset(0% 0 0 0)" : "inset(100% 0 0 0)"};
   overflow: hidden;
-   /* height: -webkit-fill-available; */
+  /* height: -webkit-fill-available; */
   -webkit-overflow-scrolling: touch;
   transition: ease 0.5s all;
   padding: 20px 20px;
@@ -143,6 +158,7 @@ const ListItems = styled.li`
 const PageTitle = styled.h1`
   font-size: ${Clamp(1.25, 1.5)};
   cursor: pointer;
+  font-weight: 700;
   text-transform: uppercase;
   z-index: 3;
 `;
