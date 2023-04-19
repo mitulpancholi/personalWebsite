@@ -121,7 +121,7 @@ const HeaderWrapper = styled.header`
   position: sticky;
   top: 0;
   mix-blend-mode: difference;
-  color: #ecb365;
+  color: #fff;
 `;
 
 const UnorderList = styled.ul`

@@ -71,13 +71,17 @@ const AboutDescWrapper = styled.article`
   margin-bottom: 60px;
 `;
 
-const MyIntro = styled.p``;
+const MyIntro = styled.p`
+
+`;
 
 const MyHobby = styled.p`
   padding-top: 60px;
 `;
 
 const IntroText = styled.span`
+text-transform: uppercase;
+font-family: var(--poppins-font);
   @media ${devices.tablet} {
     grid-column-start: 4;
     grid-column-end: 7;
@@ -89,6 +93,8 @@ const IntroText = styled.span`
 `;
 
 const IntroDescWrapper = styled.div`
+font-family: var(--poppins-font);
+letter-spacing: 1px;
   @media ${devices.tablet} {
     grid-column-start: 7;
     grid-column-end: 11;
@@ -98,11 +104,12 @@ const IntroDescWrapper = styled.div`
   p {
     font-size: ${Clamp(1, 1.25)};
     margin-bottom: 30px;
-    font-weight: 500;
+    font-weight: 400;
   }
 `;
 
 const AboutLink = styled.p`
+font-family: var(--poppins-font);
   @media ${devices.tablet} {
     grid-column-start: 7;
     grid-column-end: 11;
