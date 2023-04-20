@@ -2,12 +2,31 @@ import styled from "styled-components";
 import { PageNumber, SectionWrapper } from "../../styles/common";
 import { devices } from "../../styles/media/device";
 import Clamp from "../../lib/Clamp";
+import { useState } from "react";
 
 const Contact = () => {
-
-    const textAreaChange = (e: React.ChangeEvent) => {
-        //https://upmostly.com/tutorials/autosizing-textarea-react
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const handleSubmit = () => {
+    if (
+      formData.name === "aftab" &&
+      formData.email === "aftabmistry@gmail.com" &&
+      formData.message === "mitul"
+    ) {
+      alert("I love you <3 Aftab Mistry");
     }
+  };
+  const formChange = (e: any) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+    //https://upmostly.com/tutorials/autosizing-textarea-react
+  };
+
   return (
     <SectionWrapper>
       <PageNumber>04/</PageNumber>
@@ -21,15 +40,34 @@ const Contact = () => {
         hello, feel free to get in touch using the contact form below.
         Let&apos;s work together to create something amazing!
       </StyledContactDescription>
-      <StyledFrom>
+      <StyledFrom onSubmit={handleSubmit}>
         <fieldset>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
+          <input
+            type="text"
+            placeholder="Name"
+            value={formData.name}
+            onChange={formChange}
+            name="name"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={formChange}
+            name="email"
+          />
         </fieldset>
         <fieldset>
-          <textarea required placeholder="Message" rows={1} onChange={textAreaChange}/>
+          <textarea
+            required
+            placeholder="Message"
+            rows={1}
+            value={formData.message}
+            onChange={formChange}
+            name="message"
+          />
         </fieldset>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </StyledFrom>
     </SectionWrapper>
   );
@@ -89,7 +127,7 @@ const StyledFrom = styled.form`
     font-family: var(--poppins-font);
     border: none;
     border-bottom: 1px solid black;
-    font-size: ${Clamp(1,2)};
+    font-size: ${Clamp(1, 2)};
     padding: 10px 0;
     width: 100%;
     &:focus-visible {
@@ -101,7 +139,7 @@ const StyledFrom = styled.form`
     font-family: var(--poppins-font);
     border: none;
     border-bottom: 1px solid black;
-    font-size: ${Clamp(1,2)};
+    font-size: ${Clamp(1, 2)};
     padding: 10px 0;
     width: 100%;
     resize: none;
@@ -115,7 +153,7 @@ const StyledFrom = styled.form`
     background-color: black;
     color: white;
     padding: 10px 20px;
-    font-size: ${Clamp(1,1.75)};
+    font-size: ${Clamp(1, 1.75)};
     text-transform: uppercase;
     font-family: var(--poppins-font);
   }
