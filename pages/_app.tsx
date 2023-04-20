@@ -31,12 +31,11 @@ const GlobalStyle = createGlobalStyle`
 }
   a {
     all: unset;
-    text-decoration: none;
+    /* text-decoration: none; */
+    &:hover {
+      text-decoration: none;
+    }
   }
-  a:hover {
-    text-decoration: underline;
-  }
-
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {

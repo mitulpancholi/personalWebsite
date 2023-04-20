@@ -6,6 +6,7 @@ import IndividualProject from "./individualProject";
 import HowImage from "../../public/Images/project/howAndHow/banner.png";
 import JaneImage from "../../public/Images/project/janeWentworth/banner.png";
 import BriefImage from "../../public/Images/project/briefCatch/banner.png";
+import Link from "next/link";
 function Project() {
   const ProjectData = [
     {
@@ -40,7 +41,9 @@ function Project() {
     <>
       <SectionWrapper>
         <PageNumber>02/</PageNumber>
-        <StyledTitle>Project</StyledTitle>
+        <StyledTitle>
+          <Link href="/work">Project</Link>
+        </StyledTitle>
         {ProjectData.map((element, index) => (
           <IndividualProject
             title={element.title}
@@ -69,4 +72,29 @@ const StyledTitle = styled.h3`
   font-size: ${Clamp(2, 5)};
   line-height: 100%;
   text-transform: uppercase;
+  cursor: pointer;
+  width: max-content;
+  a {
+    position: relative;
+    overflow: hidden;
+    &:after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      background-color: black;
+      bottom: 10px;
+      right: 0;
+      width: 100%;
+      transform: scaleX(0);
+      transition: 0.4s ease-out transform;
+      transform-origin: bottom right;
+    }
+
+    &:hover {
+      &:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
 `;

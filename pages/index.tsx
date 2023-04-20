@@ -6,6 +6,8 @@ import Intro from "../components/home/intro";
 import Clamp from "../lib/Clamp";
 import { devices } from "../styles/media/device";
 import Project from "../components/home/project";
+import Contact from "../components/home/contact";
+import MyStack from "../components/home/stack";
 const Home: NextPage = () => {
   return (
     <>
@@ -24,6 +26,9 @@ const Home: NextPage = () => {
         </Description>
         <About />
         <Project />
+        <MyStack />
+        {/* <Testimonial /> */}
+        {/* <Contact /> */}
       </main>
 
       <footer></footer>
