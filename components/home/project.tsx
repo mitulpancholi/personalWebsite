@@ -3,12 +3,14 @@ import { PageNumber, SectionWrapper } from "../../styles/common";
 import { devices } from "../../styles/media/device";
 import Clamp from "../../lib/Clamp";
 import IndividualProject from "./individualProject";
-
+import HowImage from "../../public/Images/project/howAndHow/banner.png";
+import JaneImage from "../../public/Images/project/janeWentworth/banner.png";
+import BriefImage from "../../public/Images/project/briefCatch/banner.png";
 function Project() {
   const ProjectData = [
     {
       title: "How&How Studio",
-      imageUrl: "/images/project/howAndHow/banner.png",
+      imageUrl: HowImage,
       imageAlt: "How & How Studio",
       description:
         "How&How is a branding agency based in London, Lisbon and LA. known for innovative approach and creative solutions & specialize in creating compelling branding strategies that help businesses stand out in a crowded digital landscape",
@@ -17,7 +19,7 @@ function Project() {
     },
     {
       title: "Jane Wentworth",
-      imageUrl: "/images/project/janeWentworth/banner.png",
+      imageUrl: JaneImage,
       imageAlt: "Jane Wentworth",
       description:
         "Jane Wentworth Associates is an independent strategic consultancy, based in central London and working with cultural clients all over the world. We change minds, experiences and organisations for the better.",
@@ -26,7 +28,7 @@ function Project() {
     },
     {
       title: "BriefCatch",
-      imageUrl: "/images/project/briefCatch/banner.png",
+      imageUrl: BriefImage,
       imageAlt: "Briefcatch",
       description:
         "BriefCatch is a first-of-its-kind advanced editing tool that offers instant feedback on any legal document.",

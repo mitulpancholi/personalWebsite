@@ -6,7 +6,7 @@ import { devices } from "../../styles/media/device";
 
 interface IndividualProjectProps {
   title: string;
-  imageUrl: string;
+  imageUrl: any;
   imageAlt: string;
   description: string;
   stack: string[];
