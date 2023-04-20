@@ -27,8 +27,7 @@ const Home: NextPage = () => {
         <About />
         <Project />
         <MyStack />
-        {/* <Testimonial /> */}
-        {/* <Contact /> */}
+        <Contact />
       </main>
 
       <footer></footer>
