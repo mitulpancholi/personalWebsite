@@ -5,13 +5,13 @@ import About from "../components/home/about";
 import Intro from "../components/home/intro";
 import Clamp from "../lib/Clamp";
 import { devices } from "../styles/media/device";
+import Project from "../components/home/project";
 const Home: NextPage = () => {
   return (
     <>
       <Head>
         <title>Mitul Pancholi | Portfolio</title>
       </Head>
-
       <main>
         <Intro />
         <Description>
@@ -23,6 +23,7 @@ const Home: NextPage = () => {
           </ShortDesc>
         </Description>
         <About />
+        <Project />
       </main>
 
       <footer></footer>
