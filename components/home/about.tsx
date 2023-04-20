@@ -14,23 +14,24 @@ const About = () => {
         </MyIntro>
         <MyHobby>
           WHEN I&apos;M NOT BUILDING OR EXPLORING NEW WEB EXPERIENCES, I&apos;M
-          PROBABLY PLAYING GAMES OR WATCHING FOOTBALL.
+          PROBABLY PLAYING GAMES OR FLYING DRONES.
         </MyHobby>
       </AboutDescWrapper>
-      <IntroText>A blend of UI and Product Engineering</IntroText>
+      <IntroText>A harmonious fusion of user interface wizardry and product engineering prowess.</IntroText>
       <IntroDescWrapper>
         <p>
-          With a background in design, I work closely with design focused teams
-          to build websites and microsites for companies and individuals. I have
-          years of experience working and collaborating on product teams and
-          leading engineering efforts.
+          As a design aficionado, I collaborate closely with teams who share my
+          passion for innovation, crafting captivating websites and microsites
+          that elevate the online presence of both companies and individuals. My
+          extensive tenure on product teams has honed my ability to orchestrate
+          engineering efforts and drive projects to success.
         </p>
         <p>
-          With my experience in UI and product engineering, I solve product
+          With my 6+ years of experience in Frontend Developement, I solve product
           problems and build appealing usable web experiences.
         </p>
       </IntroDescWrapper>
-      <AboutLink>More about me and services</AboutLink>
+      {/* <AboutLink>More about me and services</AboutLink> */}
     </AboutWrapper>
   );
 };
@@ -62,8 +63,7 @@ const AboutDescWrapper = styled.article`
   @media ${devices.tablet} {
     grid-column-start: 4;
     grid-column-end: 11;
-  margin-bottom: 100px;
-
+    margin-bottom: 100px;
   }
   grid-column-start: 1;
   grid-column-end: 7;
@@ -71,17 +71,15 @@ const AboutDescWrapper = styled.article`
   margin-bottom: 60px;
 `;
 
-const MyIntro = styled.p`
-
-`;
+const MyIntro = styled.p``;
 
 const MyHobby = styled.p`
   padding-top: 60px;
 `;
 
 const IntroText = styled.span`
-text-transform: uppercase;
-font-family: var(--poppins-font);
+  text-transform: uppercase;
+  font-family: var(--poppins-font);
   @media ${devices.tablet} {
     grid-column-start: 4;
     grid-column-end: 7;
@@ -93,8 +91,8 @@ font-family: var(--poppins-font);
 `;
 
 const IntroDescWrapper = styled.div`
-font-family: var(--poppins-font);
-letter-spacing: 1px;
+  font-family: var(--poppins-font);
+  letter-spacing: 1px;
   @media ${devices.tablet} {
     grid-column-start: 7;
     grid-column-end: 11;
@@ -109,7 +107,7 @@ letter-spacing: 1px;
 `;
 
 const AboutLink = styled.p`
-font-family: var(--poppins-font);
+  font-family: var(--poppins-font);
   @media ${devices.tablet} {
     grid-column-start: 7;
     grid-column-end: 11;

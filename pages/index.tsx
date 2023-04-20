@@ -40,14 +40,14 @@ const Description = styled.article`
 
 const ArrowWrapper = styled.span`
   @media ${devices.tablet} {
-    grid-column-start: 1;
-    grid-column-end: 3;
     span {
       ::before {
         margin-bottom: -18px;
       }
     }
   }
+  grid-column-start: 11;
+  grid-column-end: 12;
   font-size: ${Clamp(4, 8)};
   font-weight: 700;
   text-align: center;
@@ -70,11 +70,15 @@ const ArrowWrapper = styled.span`
 
 const ShortDesc = styled.span`
   @media ${devices.tablet} {
-    grid-column-start: 3;
-    grid-column-end: 7;
+  grid-column-start: 6;
+  align-items: flex-end;
+  
   }
+  display: flex;
+  align-items: center;
   text-transform: uppercase;
   font-size: ${Clamp(1, 2)};
-  grid-column-start: 3;
-  grid-column-end: 12;
+  grid-row: 1/2;
+  grid-column-start: 1;
+  grid-column-end: 11;
 `;
