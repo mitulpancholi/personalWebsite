@@ -10,14 +10,9 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const handleSubmit = () => {
-    if (
-      formData.name === "aftab" &&
-      formData.email === "aftabmistry@gmail.com" &&
-      formData.message === "mitul"
-    ) {
-      alert("I love you <3 Aftab Mistry");
-    }
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log("this was called ====>")
   };
   const formChange = (e: any) => {
     setFormData({
