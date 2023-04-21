@@ -2,19 +2,35 @@ import styled from "styled-components";
 import { PageNumber, SectionWrapper } from "../../styles/common";
 import { devices } from "../../styles/media/device";
 import Clamp from "../../lib/Clamp";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import useAutosizeTextArea from "../../lib/AutosizeTextArea";
 
 const Contact = () => {
+  const [value, setValue] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const handleSubmit = (e: any) => {
+
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
+  useAutosizeTextArea(textAreaRef.current, value);
+
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    console.log("this was called ====>")
+    console.log("this was called ====>");
   };
-  const formChange = (e: any) => {
+
+  const formChange = (
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => {
+    if (e.target.name === "message") {
+      setValue(e.target.value);
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value,
+      });
+    }
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -35,7 +51,7 @@ const Contact = () => {
         hello, feel free to get in touch using the contact form below.
         Let&apos;s work together to create something amazing!
       </StyledContactDescription>
-      <StyledFrom onSubmit={handleSubmit}>
+      <StyledFrom method="post" onSubmit={handleSubmit}>
         <fieldset>
           <input
             type="text"
@@ -54,6 +70,7 @@ const Contact = () => {
         </fieldset>
         <fieldset>
           <textarea
+            ref={textAreaRef}
             required
             placeholder="Message"
             rows={1}
@@ -138,6 +155,7 @@ const StyledFrom = styled.form`
     padding: 10px 0;
     width: 100%;
     resize: none;
+    overflow: hidden;
     &:focus-visible {
       outline: 0px;
     }
@@ -151,5 +169,6 @@ const StyledFrom = styled.form`
     font-size: ${Clamp(1, 1.75)};
     text-transform: uppercase;
     font-family: var(--poppins-font);
+    cursor: pointer;
   }
 `;
