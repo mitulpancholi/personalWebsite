@@ -20,7 +20,7 @@ const About = () => {
 
         <StyledSecondRow>
           <StyledImageWrapper>
-            <Image src={MyImage} alt="Mitul Pancholi" fill />
+            <Image src={MyImage} alt="Mitul Pancholi" fill priority/>
           </StyledImageWrapper>
           <StyledDescWrapper>
             <StyledDescription>
