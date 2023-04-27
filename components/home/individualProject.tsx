@@ -21,6 +21,7 @@ const IndividualProject = ({
   stack,
   link,
 }: IndividualProjectProps) => {
+
   return (
     <ProjectWrapper>
       <Link href={link} rel="noopener noreferrer" target="_blank">

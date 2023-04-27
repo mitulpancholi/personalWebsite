@@ -37,13 +37,13 @@ const Header = () => {
         </Link>
         <StyledNav>
           <UnorderList>
-            <Link href="#about">
+            <Link href="/about">
               <ListItems>About</ListItems>
             </Link>
-            <Link href="#work">
+            <Link href="/work">
               <ListItems>Work</ListItems>
             </Link>
-            <Link href="#contact">
+            <Link href="/contact">
               <ListItems>Contact</ListItems>
             </Link>
           </UnorderList>
