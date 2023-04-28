@@ -5,10 +5,14 @@ import Clamp from "../lib/Clamp";
 import OptimizedConsulting from "../public/Images/about/optimizedConsulting.jpeg";
 import Studio206 from "../public/Images/about/studio206.jpeg";
 import { devices } from "../styles/media/device";
+import Head from "next/head";
 
 const About = () => {
   return (
     <>
+    <Head>
+      <title>Mitul Pancholi | About</title>
+    </Head>
       <StyledSection>
         <StyledTitle>
           I really <br />
@@ -20,7 +24,7 @@ const About = () => {
 
         <StyledSecondRow>
           <StyledImageWrapper>
-            <Image src={MyImage} alt="Mitul Pancholi" fill priority/>
+            <Image src={MyImage} alt="Mitul Pancholi" fill priority />
           </StyledImageWrapper>
           <StyledDescWrapper>
             <StyledDescription>
@@ -140,10 +144,10 @@ const Typography = styled.p`
 `;
 
 const StyledTestimonial = styled.aside`
-@media ${devices.tablet} {
-  grid-column: 8/13;
-}
-margin-top: 50px;
+  @media ${devices.tablet} {
+    grid-column: 8/13;
+  }
+  margin-top: 50px;
   grid-column: 1/13;
 `;
 

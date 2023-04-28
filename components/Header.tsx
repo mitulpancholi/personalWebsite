@@ -37,15 +37,15 @@ const Header = () => {
         </Link>
         <StyledNav>
           <UnorderList>
-            <Link href="/about">
-              <ListItems>About</ListItems>
-            </Link>
-            <Link href="/work">
-              <ListItems>Work</ListItems>
-            </Link>
-            <Link href="/contact">
-              <ListItems>Contact</ListItems>
-            </Link>
+            <ListItems>
+              <Link href="/about">About</Link>
+            </ListItems>
+            <ListItems>
+              <Link href="/work">Work</Link>
+            </ListItems>
+            <ListItems>
+              <Link href="/contact">Contact</Link>
+            </ListItems>
           </UnorderList>
           <MobileMenuTitle onClick={() => setMenuActive(!menuActive)}>
             {menuActive ? "Close" : "Menu"}
