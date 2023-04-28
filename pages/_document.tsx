@@ -6,8 +6,10 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
-import Script from "next/script";
 import { ServerStyleSheet } from "styled-components";
+import { GA_MEASUREMENT_ID } from "../lib/gtag";
+
+const isProduction = process.env.NODE_ENV === "production";
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -41,6 +43,28 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {isProduction && (
+            <>
+              {/* Google Analytics Script */}
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              />
+              <script
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{
+                  __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+                }}
+              />
+            </>
+          )}
           <meta
             name="description"
             content="I am ReactJs / NextJs Expert focusing on creative developement, Working with the industry for last 5+ years with UI designer / Agency / Product Engineer Creating to create memorable website's. My Skillset includes ReactJs, NextJs, Gatsby, GraphQL, Apollo, Framer-motion, GSAP, Styled-components and Stiches"
@@ -85,17 +109,6 @@ export default class MyDocument extends Document {
             href="/favicon-16x16.png"
           />
         </Head>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-X62TXM30MD"
-        ></Script>
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-X62TXM30MD');
-         `}
-        </Script>
         <body>
           <Main />
           <NextScript />

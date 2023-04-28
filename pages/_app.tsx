@@ -2,7 +2,9 @@ import type { AppProps } from "next/app";
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "../components/Header";
 import { poppins, oswald } from "../components/fonts/fonts";
-
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import * as gtag from "../lib/gtag"
 const GlobalStyle = createGlobalStyle`
   // variable created that can be used globally using next/font
  :root {
@@ -39,6 +41,21 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const isProduction = process.env.NODE_ENV === "production";
+  useEffect(() => {
+    const handleRouteChange = (url: URL) => {
+      /* invoke analytics function only for production */
+      if (isProduction) gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+  // eslint-disable-next-line react/jsx-props-no-spreading
+
+
   return (
     <>
       <GlobalStyle />
