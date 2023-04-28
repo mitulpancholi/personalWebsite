@@ -6,6 +6,7 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
+import Script from "next/script";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -84,6 +85,17 @@ export default class MyDocument extends Document {
             href="/favicon-16x16.png"
           />
         </Head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-X62TXM30MD"
+        ></Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-X62TXM30MD');
+         `}
+        </Script>
         <body>
           <Main />
           <NextScript />
