@@ -41,7 +41,7 @@ const Header = () => {
               <Link href="/about">About</Link>
             </ListItems>
             <ListItems>
-              <Link href="/work">Work</Link>
+              <Link href="/blog">Blog</Link>
             </ListItems>
             <ListItems>
               <Link href="/contact">Contact</Link>
@@ -58,8 +58,8 @@ const Header = () => {
             <li>
               <Link href="/">Home</Link>
             </li>
-            <Link href="/work">
-              <li>Work</li>
+            <Link href="/blog">
+              <li>Blog</li>
             </Link>
             <Link href="/about">
               <li>About</li>
@@ -143,7 +143,8 @@ const UnorderList = styled.ul`
   @media ${devices.tablet} {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    gap: 40px;
+    justify-content: flex-end;
     min-width: 300px;
   }
   display: none;
