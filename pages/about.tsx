@@ -2,17 +2,20 @@ import Image from "next/image";
 import MyImage from "../public/Images/about/about-banner.jpg";
 import styled from "styled-components";
 import Clamp from "../lib/Clamp";
-import OptimizedConsulting from "../public/Images/about/optimizedConsulting.jpeg";
-import Studio206 from "../public/Images/about/studio206.jpeg";
 import { devices } from "../styles/media/device";
 import Head from "next/head";
+import Testimonial from "../components/about/testimonial";
 
 const About = () => {
+  const OptimizedConsultingReview =
+    "Mitul did fantastic work for our project. He is an extremely talented developer, and we were fortunate to have him on the team. We hope to work with you again someday!";
+  const Studio206Review =
+    "It was a great experience working with Mitul, very easy to communicate with. His skills definitely define him as a great developer. He is really talented and has delivered better than one can expect. I will work with him in the future. Thank you for everything. Cheers!";
   return (
     <>
-    <Head>
-      <title>Mitul Pancholi | About</title>
-    </Head>
+      <Head>
+        <title>Mitul Pancholi | About</title>
+      </Head>
       <StyledSection>
         <StyledTitle>
           I really <br />
@@ -57,49 +60,18 @@ const About = () => {
               I&apos;m always up for a challenge.
             </StyledDescription>
             <StyledTestimonial>
-              <Typography>
-                &quot; Mitul did fantastic work for our project. He is an
-                extremely talented developer, and we were fortunate to have him
-                on the team. We hope to work with you again someday! &quot;
-              </Typography>
-              <hr />
-              <TestimonialWrapper>
-                <TestimonialBy>
-                  <span>Testimonial By</span>
-                  <span>- Optimized Consulting</span>
-                </TestimonialBy>
-                <div>
-                  <Image
-                    src={OptimizedConsulting}
-                    alt="Optimized Consulting"
-                    width={50}
-                    height={50}
-                  />
-                </div>
-              </TestimonialWrapper>
-
-              <Typography>
-                &quot; It was a great experience working with Mitul, very easy
-                to communicate with. His skills definitely define him as a great
-                developer. He is really talented and has delivered better than
-                one can expect. I will work with him in the future. Thank you
-                for everything. Cheers! &quot;
-              </Typography>
-              <hr />
-              <TestimonialWrapper>
-                <TestimonialBy>
-                  <span>Testimonial By</span>
-                  <span>- Studio 206</span>
-                </TestimonialBy>
-                <div>
-                  <Image
-                    src={Studio206}
-                    alt="Studio 206"
-                    width={50}
-                    height={50}
-                  />
-                </div>
-              </TestimonialWrapper>
+              <Testimonial
+                imgAlt="Optimized Consulting"
+                imgSrc={"/Images/about/optimizedConsulting.jpeg"}
+                review={OptimizedConsultingReview}
+                companyName="Optimized Consulting"
+              />
+              <Testimonial
+                imgAlt="Studio 206"
+                imgSrc={"/Images/about/studio206.jpeg"}
+                review={Studio206Review}
+                companyName="Studio 206"
+              />
             </StyledTestimonial>
           </StyledDescWrapper>
         </StyledSecondRow>
@@ -109,20 +81,6 @@ const About = () => {
 };
 
 export default About;
-
-const TestimonialWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  font-size: ${Clamp(0.75, 1)};
-  align-items: center;
-  margin-bottom: 60px;
-`;
-
-const TestimonialBy = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 const StyledDescWrapper = styled.div`
   @media ${devices.tablet} {
@@ -136,11 +94,6 @@ const StyledDescWrapper = styled.div`
   line-height: 120%;
   font-family: var(--poppins-font);
   margin-bottom: 60px;
-`;
-
-const Typography = styled.p`
-  margin-bottom: 10px;
-  font-style: italic;
 `;
 
 const StyledTestimonial = styled.aside`
