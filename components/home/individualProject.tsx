@@ -55,7 +55,7 @@ const ProjectWrapper = styled.div`
   }
 `;
 
-const StyledProjectTitle = styled.h5`
+const StyledProjectTitle = styled.h4`
 @media ${devices.tablet} {
   line-height: 100%;
 
