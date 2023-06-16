@@ -56,7 +56,7 @@ const StyledImageWrapper = styled.div<ImageWrapperProps>`
   width: 100%;
   height: ${(props) => (props.height ? props.height : "300px")};
   img {
-    object-fit: cover;
+    object-fit: contain;
     width: 100% !important;
     position: relative !important;
     height: 100% !important;

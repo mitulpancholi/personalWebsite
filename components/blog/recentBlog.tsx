@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import Clamp from "../../lib/Clamp";
 import BlogCard from "./blogCard";
+import { devices } from "../../styles/media/device";
 
 const RecentBlog = () => {
   return (
     <StyledSection>
       <StyledTitle>Recent Blog</StyledTitle>
       <BlogListing>
-        <BlogCard height="80%" />
-        <BlogCard  />
+        <BlogCard />
+        <BlogCard />
         <BlogCard />
         <BlogCard />
       </BlogListing>
@@ -29,15 +30,13 @@ const StyledSection = styled.section`
 `;
 
 const BlogListing = styled.div`
-  display: grid;
-  grid-template-columns: 4fr 3fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20px;
-
-  article {
-    &:first-child {
-      grid-column: 1/2;
-      grid-row: 1/4;
-    }
+ @media ${devices.tablet} {
+    grid-template-columns: repeat(2, 1fr);
   }
+  @media ${devices.laptop} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  display: grid;
+  gap: 100px;
+  grid-template-columns: repeat(1, 1fr);
 `;
