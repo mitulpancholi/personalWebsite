@@ -5,8 +5,8 @@ import { poppins, oswald } from "../components/fonts/fonts";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
-import Router from 'next/router';
-import Preloader from '../components/preloader';
+// import Router from 'next/router';
+// import Preloader from '../components/preloader';
 
 const GlobalStyle = createGlobalStyle`
   // variable created that can be used globally using next/font
