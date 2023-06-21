@@ -72,8 +72,8 @@
         (s = !1),
         o.data
       );
-    } catch (b) {
-      throw (console.log(">> ERR: ", b), b);
+    } catch (f) {
+      throw (console.log(">> ERR: ", f), f);
     }
   }
   class r {
@@ -287,7 +287,7 @@
     }
     createWidgetContent() {
       (this.widgetContainer.innerHTML =
-        '\n      <header class="widget__header">\n        <div class="logo__wrapper">\n          <p class="logo">P</p>\n          <h3>Product Hunt</h3>\n        </div>\n        <div class="action__button">\n          <img id="close-btn" src="./icons8-close.svg" alt="close" />\n        </div>\n      </header>\n      <div class="chat__area">\n      </div>\n      <div class="send__btn">\n        <textarea id="message" name="message" rows="1"></textarea>\n        <p><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">\n        <path d="M20 12L4 4L6 12M20 12L4 20L6 12M20 12H6" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n        </svg></p>\n      </div>\n      <p class="poweredBy">Powered by <b><a class="website__link" href="https://RAFIQ.ai" target="_blank">RAFIQ.AI</a></b></p>\n    '),
+        '\n      <header class="widget__header">\n        <div class="logo__wrapper">\n          <p class="logo">P</p>\n          <h3>Product Hunt</h3>\n        </div>\n        <div class="action__button">\n        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"/></svg>\n        </div>\n      </header>\n      <div class="chat__area">\n      </div>\n      <div class="send__btn">\n        <textarea id="message" name="message" rows="1"></textarea>\n        <p><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">\n        <path d="M20 12L4 4L6 12M20 12L4 20L6 12M20 12H6" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n        </svg></p>\n      </div>\n      <p class="poweredBy">Powered by <b><a class="website__link" href="https://RAFIQ.ai" target="_blank">RAFIQ.AI</a></b></p>\n    '),
         (this.chatArea = this.widgetContainer.querySelector(".chat__area")),
         this.scrollChatToBottom();
     }
