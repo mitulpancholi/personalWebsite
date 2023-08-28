@@ -47,9 +47,7 @@ const Header = () => {
               <Link href="/contact">Contact</Link>
             </ListItems>
           </UnorderList>
-          <MobileMenuTitle onClick={() => setMenuActive(!menuActive)}>
-            {menuActive ? "Close" : "Menu"}
-          </MobileMenuTitle>
+          <MobileMenuTitle onClick={() => setMenuActive(!menuActive)}>{menuActive ? "Close" : "Menu"}</MobileMenuTitle>
         </StyledNav>
       </HeaderWrapper>
       <MobileMenu openMenu={menuActive}>
@@ -97,8 +95,7 @@ const MobileMenu = styled.div<MobileMenuProps>`
   left: 0;
   background: #000000;
   z-index: 4;
-  clip-path: ${(props) =>
-    props.openMenu ? "inset(0% 0 0 0)" : "inset(100% 0 0 0)"};
+  clip-path: ${(props) => (props.openMenu ? "inset(0% 0 0 0)" : "inset(100% 0 0 0)")};
   overflow: hidden;
   /* height: -webkit-fill-available; */
   -webkit-overflow-scrolling: touch;

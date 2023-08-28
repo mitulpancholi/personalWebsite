@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
-import styled, { createGlobalStyle } from "styled-components";
+import isPropValid from "@emotion/is-prop-valid";
+import styled, { createGlobalStyle, StyleSheetManager } from "styled-components";
 import Header from "../components/Header";
 import { poppins, oswald } from "../components/fonts/fonts";
 import { useRouter } from "next/router";
@@ -43,7 +44,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const isProduction = process.env.NODE_ENV === "production";
@@ -56,19 +56,25 @@ function MyApp({ Component, pageProps }: AppProps) {
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, [router.events]);
+  }, [router.events, isProduction]);
 
-  
+  const showHeader = router.pathname.startsWith("/studio");
 
   return (
     <>
       <GlobalStyle />
       {/* Custom Preloader on first page load */}
       {/* <Preloader /> */}
-      <Container>
-        <Header />
+      {showHeader ? (
         <Component {...pageProps} />
-      </Container>
+      ) : (
+        <StyleSheetManager shouldForwardProp={(prop) => isPropValid(prop) && prop !== "openMenu"}>
+          <Container>
+            <Header />
+            <Component {...pageProps} />
+          </Container>
+        </StyleSheetManager>
+      )}
     </>
   );
 }
