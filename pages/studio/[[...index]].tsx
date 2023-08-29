@@ -7,6 +7,7 @@ export default function StudioPage() {
   return (
     <>
       <Head>
+      <title>Your Desired Title Here</title>
         {Object.entries(metadata).map(([key, value]) => (
           <meta key={key} name={key} content={value} />
         ))}

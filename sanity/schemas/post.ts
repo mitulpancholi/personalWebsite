@@ -22,16 +22,6 @@ export default defineType({
       description: "A brief summary or overview of the post.",
     }),
     defineField({
-      name: "metaKeywords",
-      title: "Keywords",
-      type: "array",
-      of: [{ type: "string" }],
-      description: "Enter Keywords for SEO",
-      options: {
-        layout: "tags",
-      },
-    }),
-    defineField({
       name: "slug",
       title: "Slug",
       type: "slug",

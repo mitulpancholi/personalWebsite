@@ -18,7 +18,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    console.log("this was called ====>");
   };
 
   const formChange = (
