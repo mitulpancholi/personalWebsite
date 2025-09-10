@@ -22,9 +22,7 @@ const Contact = () => {
     console.log("this was called ====>");
   };
 
-  const formChange = (
-    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
-  ) => {
+  const formChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     if (e.target.name === "message") {
       setValue(e.target.value);
       setFormData({
@@ -42,7 +40,11 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Mitul Pancholi | Contact</title>
+        <title>Contact Mitul Pancholi | Hire a Full Stack Developer</title>
+        <meta
+          name="description"
+          content="Get in touch with Mitul Pancholi for your next SaaS, FinTech, or web development project. Available for freelance, contract, or remote full stack development using React.js, Next.js, Node.js, and modern web technologies."
+        />
       </Head>
       <StyledSection>
         {/*  */}
@@ -58,40 +60,17 @@ const Contact = () => {
         {/* Contact Form */}
         <ContactFormWrapper>
           <div>
-            <h4>
-              Let&apos;s turn your ideas into reality. Together, we&apos;ve got
-              this!
-            </h4>
+            <h4>Let&apos;s turn your ideas into reality. Together, we&apos;ve got this!</h4>
             <p>Tell us more about yourself and what you&apos;ve got in mind.</p>
           </div>
 
           <StyledFrom method="post" onSubmit={handleSubmit}>
             <fieldset>
-              <input
-                type="text"
-                placeholder="Name"
-                value={formData.name}
-                onChange={formChange}
-                name="name"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                value={formData.email}
-                onChange={formChange}
-                name="email"
-              />
+              <input type="text" placeholder="Name" value={formData.name} onChange={formChange} name="name" />
+              <input type="email" placeholder="Email" value={formData.email} onChange={formChange} name="email" />
             </fieldset>
             <fieldset>
-              <textarea
-                ref={textAreaRef}
-                required
-                placeholder="Message"
-                rows={1}
-                value={formData.message}
-                onChange={formChange}
-                name="message"
-              />
+              <textarea ref={textAreaRef} required placeholder="Message" rows={1} value={formData.message} onChange={formChange} name="message" />
             </fieldset>
             <button type="submit">Submit</button>
           </StyledFrom>

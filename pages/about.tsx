@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MyImage from "../public/Images/about/about-banner.jpg";
+import MyImage from "../public/Images/about/IMG_9313.jpg";
 import styled from "styled-components";
 import Clamp from "../lib/Clamp";
 import { devices } from "../styles/media/device";
@@ -14,7 +14,11 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Mitul Pancholi | About</title>
+        <title>About Mitul Pancholi | Full Stack Developer & SaaS Engineer</title>
+        <meta
+          name="description"
+          content="Learn more about Mitul Pancholi, a Full Stack Developer with 8+ years of experience building SaaS platforms, scalable web apps, and pixel-perfect frontends using React.js, Next.js, Node.js, TypeScript, and cloud technologies."
+        />
       </Head>
       <StyledSection>
         <StyledTitle>
@@ -31,47 +35,25 @@ const About = () => {
           </StyledImageWrapper>
           <StyledDescWrapper>
             <StyledDescription>
-              Well, well, well, look who stumbled upon my corner of the
-              internet! <br />
+              Well, well, well, look who stumbled upon my corner of the internet! <br />
               <br />
-              As a web developer with 6+ years of experience, I&apos;ve spent
-              more time in front of a computer than I have with actual humans.
-              But hey, that&apos;s the price you pay for being a coding genius,
-              right? <br />
+              As a web developer with 6+ years of experience, I&apos;ve spent more time in front of a computer than I have with actual humans. But hey, that&apos;s the price you
+              pay for being a coding genius, right? <br />
               <br />
-              Speaking of genius, I&apos;ve been known to build websites that
-              are so beautiful, it&apos;s like staring into the sun (but without
-              the risk of permanent eye damage). And I&apos;m not just talking
-              about your run-of-the-mill, boring websites - I&apos;m talking
-              about sites that make you want to break out into a spontaneous
-              dance party. <br />
+              Speaking of genius, I&apos;ve been known to build websites that are so beautiful, it&apos;s like staring into the sun (but without the risk of permanent eye damage).
+              And I&apos;m not just talking about your run-of-the-mill, boring websites - I&apos;m talking about sites that make you want to break out into a spontaneous dance
+              party. <br />
               <br />
-              But let&apos;s be real here, web development isn&apos;t all
-              sunshine and rainbows. I&apos;ve spent countless nights hunched
-              over my keyboard, chugging coffee like it&apos;s my life force,
-              and muttering obscenities under my breath. It&apos;s not pretty,
-              but it&apos;s necessary to make sure your website is functioning
-              at its peak. <br />
+              But let&apos;s be real here, web development isn&apos;t all sunshine and rainbows. I&apos;ve spent countless nights hunched over my keyboard, chugging coffee like
+              it&apos;s my life force, and muttering obscenities under my breath. It&apos;s not pretty, but it&apos;s necessary to make sure your website is functioning at its
+              peak. <br />
               <br />
-              And don&apos;t even get me started on clients. I&apos;ve had to
-              deal with people who think that adding a blinking rainbow
-              background to their website is a good idea (spoiler alert:
-              it&apos;s not). But hey, it&apos;s all part of the job, and
-              I&apos;m always up for a challenge.
+              And don&apos;t even get me started on clients. I&apos;ve had to deal with people who think that adding a blinking rainbow background to their website is a good idea
+              (spoiler alert: it&apos;s not). But hey, it&apos;s all part of the job, and I&apos;m always up for a challenge.
             </StyledDescription>
             <StyledTestimonial>
-              <Testimonial
-                imgAlt="Optimized Consulting"
-                imgSrc={"/Images/about/optimizedConsulting.jpeg"}
-                review={OptimizedConsultingReview}
-                companyName="Optimized Consulting"
-              />
-              <Testimonial
-                imgAlt="Studio 206"
-                imgSrc={"/Images/about/studio206.jpeg"}
-                review={Studio206Review}
-                companyName="Studio 206"
-              />
+              <Testimonial imgAlt="Optimized Consulting" imgSrc={"/Images/about/optimizedConsulting.jpeg"} review={OptimizedConsultingReview} companyName="Optimized Consulting" />
+              <Testimonial imgAlt="Studio 206" imgSrc={"/Images/about/studio206.jpeg"} review={Studio206Review} companyName="Studio 206" />
             </StyledTestimonial>
           </StyledDescWrapper>
         </StyledSecondRow>

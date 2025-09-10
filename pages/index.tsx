@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Mitul Pancholi | Portfolio</title>
+        <title>Mitul Pancholi | Full Stack Developer | React, Next.js, Node.js</title>
       </Head>
       <main>
         <Intro />
