@@ -12,7 +12,7 @@ const About = () => {
           Passionate about modern web technologies, I work at the intersection of creative design and robust engineering. From pixel-perfect frontends to scalable backends, I
           create digital products that deliver both memorable user experiences and reliable performance.
         </MyIntro>
-        <MyHobby>When I'm not building or scaling web platforms, you'll probably find me exploring new tech, flying drones, or playing games.</MyHobby>
+        <MyHobby>When I&apos;m not building or scaling web platforms, you&apos;ll probably find me exploring new tech, flying drones, or playing games.</MyHobby>
       </AboutDescWrapper>
       <IntroText>Scalable SaaS Solutions, Engineered for Growth</IntroText>
       <IntroDescWrapper>
@@ -21,9 +21,9 @@ const About = () => {
           From MVPs to enterprise-grade platforms, I ensure products are secure, scalable, and optimized for performance.
         </p>
         <p>
-          With 8+ years in full stack development, I’ve delivered solutions handling real-time transactions at scale, built multi-tenant SaaS architectures, and integrated APIs,
-          payment systems, and cloud services to drive measurable business results. My focus is on creating digital products that engage users, streamline workflows, and accelerate
-          growth.
+          With 8+ years in full stack development, I&apos;ve delivered solutions handling real-time transactions at scale, built multi-tenant SaaS architectures, and integrated
+          APIs, payment systems, and cloud services to drive measurable business results. My focus is on creating digital products that engage users, streamline workflows, and
+          accelerate growth.
         </p>
       </IntroDescWrapper>
       {/* <AboutLink>More about me and services</AboutLink> */}
