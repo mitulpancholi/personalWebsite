@@ -4,4 +4,4 @@ Disallow: /admin/
 User-agent: *
 Allow: /
 
-Sitemap: https://mitulpancholi.com/sitemap.xml
+Sitemap: https://mitulpancholi.dev/sitemap.xml

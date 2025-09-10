@@ -57,7 +57,7 @@ export default class MyDocument extends Document {
             content="Mitul Pancholi – Full Stack Developer with 8+ years of experience building scalable SaaS platforms, high-performance web apps, and pixel-perfect frontends. Expert in React.js, Next.js, Node.js, TypeScript, Tailwind CSS, GraphQL, and cloud solutions (AWS, Docker, Firebase). Delivering creative, responsive, and conversion-focused applications for startups and enterprises."
           />
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://www.mitulpancholi.com" />
+          <meta property="twitter:url" content="https://www.mitulpancholi.dev" />
           <meta property="twitter:title" content="Mitul Pancholi" />
           <meta
             property="twitter:description"
@@ -65,7 +65,7 @@ export default class MyDocument extends Document {
           />
           <meta property="twitter:image" content="/IMG_9313.jpg" />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://www.mitulpancholi.com" />
+          <meta property="og:url" content="https://www.mitulpancholi.dev" />
           <meta property="og:title" content="Mitul Pancholi" />
           <meta
             property="og:description"
