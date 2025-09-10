@@ -7,11 +7,19 @@ const MyStack = () => {
   const StackData = [
     {
       title: "Headless CMS",
-      value: ["Sanity", "Contentful"],
+      value: ["Sanity", "Contentful", "DatoCMS"],
     },
     {
       title: "Frameworks",
-      value: ["Next.js", "Gatsby"],
+      value: ["Next.js", "Gatsby", "Node.js", "Express"],
+    },
+    {
+      title: "UI Libraries",
+      value: ["Tailwind CSS", "Shadcn UI", "Framer", "Radix UI"],
+    },
+    {
+      title: "Database",
+      value: ["MongoDB", "PostgreSQL", "MySQL"],
     },
     {
       title: "Languages & Libraries",
@@ -19,16 +27,17 @@ const MyStack = () => {
     },
     {
       title: "Deployment Platforms",
-      value: ["Vercel", "Netlify"],
+      value: ["Vercel", "Netlify", "AWS", "Docker", "Firebase"],
     },
     {
       title: "Collaboration",
-      value: ["Slack", "Jira", "Asuna"],
+      value: ["Slack", "Jira", "Asuna", "Notion"],
     },
     {
       title: "Version Control",
-      value: ["Github", "BitBucket"],
+      value: ["Github", "BitBucket", "GitLab"],
     },
+  
   ];
   return (
     <SectionWrapper>

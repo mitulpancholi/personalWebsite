@@ -6,9 +6,7 @@ const Intro = () => {
     <HomeSection>
       <StyledHeading>
         <StyledIntroQuote>
-          Welcome to the realm of innovative design and seamless user
-          experiences - where every pixel tells a story, and each line of code
-          transforms visions into reality.
+          From stunning interfaces to robust backend systems — I craft full stack solutions that engage users, drive growth, and scale effortlessly.
         </StyledIntroQuote>
       </StyledHeading>
     </HomeSection>
@@ -39,7 +37,7 @@ const StyledIntroQuote = styled.span`
   font-family: var(--poppins-font);
   font-weight: 500;
   line-height: 120%;
-`
+`;
 
 const HomeSection = styled.section`
   height: calc(100vh - 62px);

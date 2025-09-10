@@ -9,27 +9,21 @@ const About = () => {
       <PageNumber>01/</PageNumber>
       <AboutDescWrapper>
         <MyIntro>
-          PASSIONATE ABOUT WEB TECHNOLOGIES. I LOVE WORKING AT THE INTERSECTION
-          OF CREATIVITY AND USER FRIENDLY INTERFACES. I CREATE MEMORABLE WEB
-          EXPERIENCES.
+          Passionate about modern web technologies, I work at the intersection of creative design and robust engineering. From pixel-perfect frontends to scalable backends, I
+          create digital products that deliver both memorable user experiences and reliable performance.
         </MyIntro>
-        <MyHobby>
-          WHEN I&apos;M NOT BUILDING OR EXPLORING NEW WEB EXPERIENCES, I&apos;M
-          PROBABLY PLAYING GAMES OR FLYING DRONES.
-        </MyHobby>
+        <MyHobby>When I'm not building or scaling web platforms, you'll probably find me exploring new tech, flying drones, or playing games.</MyHobby>
       </AboutDescWrapper>
-      <IntroText>A harmonious fusion of user interface wizardry and product engineering prowess.</IntroText>
+      <IntroText>Scalable SaaS Solutions, Engineered for Growth</IntroText>
       <IntroDescWrapper>
         <p>
-          As a design aficionado, I collaborate closely with teams who share my
-          passion for innovation, crafting captivating websites and microsites
-          that elevate the online presence of both companies and individuals. My
-          extensive tenure on product teams has honed my ability to orchestrate
-          engineering efforts and drive projects to success.
+          I partner with startups and enterprises to design and build SaaS platforms and business applications that combine pixel-perfect frontends with robust backend systems.
+          From MVPs to enterprise-grade platforms, I ensure products are secure, scalable, and optimized for performance.
         </p>
         <p>
-          With my 6+ years of experience in Frontend Developement, I solve product
-          problems and build appealing usable web experiences.
+          With 8+ years in full stack development, I’ve delivered solutions handling real-time transactions at scale, built multi-tenant SaaS architectures, and integrated APIs,
+          payment systems, and cloud services to drive measurable business results. My focus is on creating digital products that engage users, streamline workflows, and accelerate
+          growth.
         </p>
       </IntroDescWrapper>
       {/* <AboutLink>More about me and services</AboutLink> */}
@@ -38,7 +32,6 @@ const About = () => {
 };
 
 export default About;
-
 
 const AboutDescWrapper = styled.article`
   @media ${devices.tablet} {
@@ -52,10 +45,13 @@ const AboutDescWrapper = styled.article`
   margin-bottom: 60px;
 `;
 
-const MyIntro = styled.p``;
+const MyIntro = styled.p`
+  text-transform: uppercase;
+`;
 
 const MyHobby = styled.p`
   padding-top: 60px;
+  text-transform: uppercase;
 `;
 
 const IntroText = styled.span`

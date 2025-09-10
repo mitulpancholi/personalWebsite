@@ -20,9 +20,7 @@ const Home: NextPage = () => {
           <ArrowWrapper>
             <span>↓</span>
           </ArrowWrapper>
-          <ShortDesc>
-            I support designers and agencies with creative developement
-          </ShortDesc>
+          <ShortDesc>I help businesses and agencies turn ideas into scalable SaaS products and web apps.</ShortDesc>
         </Description>
         <About />
         <Project />
@@ -75,9 +73,8 @@ const ArrowWrapper = styled.span`
 
 const ShortDesc = styled.span`
   @media ${devices.tablet} {
-  grid-column-start: 6;
-  align-items: flex-end;
-  
+    grid-column-start: 6;
+    align-items: flex-end;
   }
   display: flex;
   align-items: center;
