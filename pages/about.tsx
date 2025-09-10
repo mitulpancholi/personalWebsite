@@ -35,22 +35,27 @@ const About = () => {
           </StyledImageWrapper>
           <StyledDescWrapper>
             <StyledDescription>
-              Well, well, well, look who stumbled upon my corner of the internet! <br />
+              I am Mitul Pancholi, a Full Stack Developer with 8+ years of experience building scalable SaaS platforms, high-performance web applications, and secure backend
+              systems. My work focuses on delivering end-to-end solutions that combine pixel-perfect user interfaces with robust, cloud-ready architectures. <br /> <br /> Over the years,
+              I have partnered with startups, agencies, and enterprises to design and develop products that are responsive, SEO-friendly, and optimized for growth. From real-time
+              applications handling 500k+ transactions to multi-tenant SaaS dashboards with authentication, payments, and API integrations, I specialize in creating applications
+              that scale seamlessly and perform reliably under heavy demand.
+              <br /> <br />My expertise spans a modern tech stack, including React.js, Next.js, Node.js, TypeScript, GraphQL, Tailwind CSS, PostgreSQL, MongoDB, MySQL, Docker, AWS, and
+              Firebase. Beyond technical delivery, I focus on clean code, maintainability, security best practices, and CI/CD workflows to ensure long-term success for every
+              project.
+              <br /><br />
+              When working with me, you can expect:
+              <br /><br />
+              <ul>
+                <li>High-performance applications built for scalability and reliability</li>
+                <li>Conversion-focused, responsive frontends designed for engagement and SEO</li>
+                <li>Secure APIs and cloud infrastructure for SaaS and enterprise platforms</li>
+                <li>Clear communication, structured workflows, and on-time delivery</li>
+              </ul>
               <br />
-              As a web developer with 6+ years of experience, I&apos;ve spent more time in front of a computer than I have with actual humans. But hey, that&apos;s the price you
-              pay for being a coding genius, right? <br />
-              <br />
-              Speaking of genius, I&apos;ve been known to build websites that are so beautiful, it&apos;s like staring into the sun (but without the risk of permanent eye damage).
-              And I&apos;m not just talking about your run-of-the-mill, boring websites - I&apos;m talking about sites that make you want to break out into a spontaneous dance
-              party. <br />
-              <br />
-              But let&apos;s be real here, web development isn&apos;t all sunshine and rainbows. I&apos;ve spent countless nights hunched over my keyboard, chugging coffee like
-              it&apos;s my life force, and muttering obscenities under my breath. It&apos;s not pretty, but it&apos;s necessary to make sure your website is functioning at its
-              peak. <br />
-              <br />
-              And don&apos;t even get me started on clients. I&apos;ve had to deal with people who think that adding a blinking rainbow background to their website is a good idea
-              (spoiler alert: it&apos;s not). But hey, it&apos;s all part of the job, and I&apos;m always up for a challenge.
+              I am committed to helping businesses transform ideas into products, optimize workflows, and accelerate digital growth through modern full stack development.
             </StyledDescription>
+
             <StyledTestimonial>
               <Testimonial imgAlt="Optimized Consulting" imgSrc={"/Images/about/optimizedConsulting.jpeg"} review={OptimizedConsultingReview} companyName="Optimized Consulting" />
               <Testimonial imgAlt="Studio 206" imgSrc={"/Images/about/studio206.jpeg"} review={Studio206Review} companyName="Studio 206" />
@@ -80,18 +85,27 @@ const StyledDescWrapper = styled.div`
 
 const StyledTestimonial = styled.aside`
   @media ${devices.tablet} {
-    grid-column: 8/13;
+    grid-column: 6/13;
   }
-  margin-top: 50px;
+  margin-top: 80px;
   grid-column: 1/13;
 `;
 
 const StyledDescription = styled.article`
   @media ${devices.tablet} {
-    grid-column: 1/7;
+    grid-column: 1/13;
   }
   grid-column: 1/13;
   font-weight: 300;
+
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
 `;
 
 const StyledSection = styled.section`
